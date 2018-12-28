@@ -1,0 +1,30 @@
+/*
+ Theme Name:   Forefront
+ Theme URI:    https://generatepress.com/forefront/
+ Description:  Forefront is a GeneratePress child theme with two sidebars and a red color scheme. Using GeneratePress you can alter the child theme to your taste in minutes. Forefront is mobile responsive, W3C Markup Validated, Schema.org integrated, search engine friendly, cross browser compatible and 100% translatable. See more about GeneratePress here: http://generatepress.com
+ Author:       Thomas Usborne
+ Author URI:   http://edge22.com
+ Template:     generatepress
+ Version:      1.0.4
+ Tags: two-columns, three-columns, one-column, right-sidebar, left-sidebar, footer-widgets, blog, e-commerce, flexible-header, full-width-template, buddypress, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, rtl-language-support, featured-images, theme-options
+
+ Forefront, Copyright 2016 Thomas Usborne
+ Forefront is distributed under the terms of the GNU GPL
+
+ Forefront is a child theme of GeneratePress
+ 
+ It's not recommended to add CSS to this file, as it will be lost if you ever update this child theme.
+ Instead, use a Custom CSS plugin.
+ 
+ */
+ 
+.post-image {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+.widget-title {
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}

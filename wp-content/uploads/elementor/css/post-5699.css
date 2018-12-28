@@ -1,0 +1,92 @@
+.elementor-5699 .elementor-element.elementor-element-68bbda21{background-color:#01293f;transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-5699 .elementor-element.elementor-element-68bbda21 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-5699 .elementor-element.elementor-element-14b6639 > .elementor-element-populated{padding:35px 15px 15px 0px;}.elementor-5699 .elementor-element.elementor-element-7fe82f97{text-align:center;}.elementor-5699 .elementor-element.elementor-element-7fe82f97.elementor-widget-heading .elementor-heading-title{color:#ffffff;}.elementor-5699 .elementor-element.elementor-element-7fe82f97 .elementor-heading-title{text-shadow:0px 0px 0px rgba(0,0,0,0.3);}.elementor-5699 .elementor-element.elementor-element-5f54f91d .elementor-text-editor{text-align:center;}.elementor-5699 .elementor-element.elementor-element-5f54f91d{color:#ffffff;}.elementor-5699 .elementor-element.elementor-element-70df9215{background-color:#01293f;transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-5699 .elementor-element.elementor-element-70df9215 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .elementor-main-swiper{height:596px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .elementor-main-swiper .swiper-slide{background-color:#ffffff;border-radius:4px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .elementor-swiper-button{font-size:20px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .swiper-pagination-bullet{height:0px;width:0px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .swiper-container-horizontal .swiper-pagination-progressbar{height:0px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17 .swiper-pagination-fraction{font-size:0px;}.elementor-5699 .elementor-element.elementor-element-500d87ed .elementor-main-swiper{height:596px;}.elementor-5699 .elementor-element.elementor-element-500d87ed .elementor-main-swiper .elementor-carousel-image{background-size:contain;}.elementor-5699 .elementor-element.elementor-element-500d87ed.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}.elementor-5699 .elementor-element.elementor-element-500d87ed .elementor-main-swiper .swiper-slide{border-radius:4px;border-color:#a3a3a3;}.elementor-5699 .elementor-element.elementor-element-500d87ed .elementor-swiper-button{font-size:20px;}@media(max-width:1024px){.elementor-5699 .elementor-element.elementor-element-1cb2e17 .elementor-main-swiper{height:565px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}.elementor-5699 .elementor-element.elementor-element-500d87ed.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}}@media(max-width:767px){.elementor-5699 .elementor-element.elementor-element-1cb2e17 .elementor-main-swiper{height:565px;}.elementor-5699 .elementor-element.elementor-element-1cb2e17.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}.elementor-5699 .elementor-element.elementor-element-500d87ed.elementor-skin-slideshow .elementor-main-swiper{margin-bottom:10px;}}/* Start custom CSS for heading, class: .elementor-element-7fe82f97 */.elementor-heading-title:after{
+   position: absolute;
+    content: " ";
+    background: #EEAC2D;
+    height: 3px;
+    width: 70px;
+    bottom: -10px;
+    left: calc(50% - 35px);
+}
+
+.elementor-heading-title{
+    font-size: 33px !important;
+}/* End custom CSS */
+/* Start custom CSS for text-editor, class: .elementor-element-5f54f91d */.medium{
+    font-size: 17px
+}/* End custom CSS */
+/* Start custom CSS for media-carousel-custom, class: .elementor-element-1cb2e17 */.media-carousel-custom-title{
+    height: 96px;
+    text-align: center;
+    padding: 20px 10px;
+    color: #034366;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.media-carousel-custom-brand{
+    color: #222;
+    font-size: 19px;
+    text-align: center;
+    padding: 20px;
+    height: 90px;
+    background: rgba(0,0,0,.02);
+}
+
+.media-carousel-custom-button{
+    height: 78px;
+    padding: 18px;
+}
+
+.media-carousel-custom-button div{
+    width: 214px;
+    margin: 0 auto;
+}
+
+.media-carousel-custom-button div a{
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    background: #0585CC;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.media-carousel-custom-review{
+    height: 42px;
+}
+
+.media-carousel-custom-review div{
+    text-align: center;
+}
+.media-carousel-custom-review div a{
+    color: #0585CC;
+    font-size: 14px;
+}
+.media-carousel-custom-brand:after{
+    display: block;
+    content: ' ';
+    background: #EEAC2D;
+    width: 25px;
+    height: 2px;
+    margin: 15px auto 0;
+}
+
+.media-carousel-custom-summary{
+    height: 48px;
+    text-align: center;
+    font-size: 15px;
+    background: rgba(0,0,0,.02);
+}
+
+.elementor-widget-media-carousel-custom .swiper-slide{
+    min-width: 240px !important;
+}
+
+.elementor-widget-media-carousel-custom > div{
+    min-width: 214px;
+}/* End custom CSS */
