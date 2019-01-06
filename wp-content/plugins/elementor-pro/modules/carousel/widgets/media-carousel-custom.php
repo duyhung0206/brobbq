@@ -15,6 +15,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+
 class Media_Carousel_Custom extends Base
 {
 
@@ -281,7 +282,7 @@ class Media_Carousel_Custom extends Base
                 <div><a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '">Check Price</a></div>
               </div>';
         echo '<div class="media-carousel-custom-review">
-                <div><a target="_blank" rel="nofollow" href="#' . $slide["review-to"] . '">Read Review</a></div>
+                <div><a target="_blank" class="read-review" href="#'. $slide["review-to"] . '">Read Review</a></div>
               </div>';
     }
 
@@ -352,6 +353,39 @@ class Media_Carousel_Custom extends Base
                 'default' => '#0585CC',
                 'selectors' => [
                     '{{WRAPPER}} .media-carousel-custom-button div a' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'button_hover_background_color',
+            [
+                'label' => __('Button Hover Background Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0082d3',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-button:hover div a' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'button_read_review_color',
+            [
+                'label' => __('Button Read review Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0585CC',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-review div a.read-review' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'swiper_button_color',
+            [
+                'label' => __('Button Swiper Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#FBFBFB',
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-swiper-button i' => 'color: {{VALUE}};',
                 ],
             ]
         );

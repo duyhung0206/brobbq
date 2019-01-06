@@ -132,6 +132,18 @@ class Widget_Accordion extends Widget_Base {
 			]
 		);
 
+        $this->add_control(
+            'tab_title_color',
+            [
+                'label' => __('Tab title color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#6ec1e4',
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-accordion .elementor-accordion-item a' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
 		$this->add_control(
 			'view',
 			[

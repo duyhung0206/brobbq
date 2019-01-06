@@ -5341,3 +5341,30 @@ ul.elementor-nav-menu--dropdown a, ul.elementor-nav-menu--dropdown a:hover, ul.e
 .elementor-sticky--active {
   z-index: 99; }
 /*# sourceMappingURL=frontend.css.map */
+
+
+/*hades add new*/
+@media (max-width: 1024px){
+    .elementor:not(.elementor-edit-area-active) .table-of-content.elementor-hidden-tablet {
+        left: 0px;
+        z-index: 999999;
+        display: block;
+        max-width: unset;
+        position: fixed;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        top: 0px;
+        background: white;
+    }
+
+    .elementor:not(.elementor-edit-area-active) .table-of-content.elementor-hidden-tablet .title {
+        display: none;
+    }
+    .elementor:not(.elementor-edit-area-active) .table-of-content.elementor-hidden-tablet .elementor-widget-wrap {
+        display: -webkit-box;
+    }
+    .elementor:not(.elementor-edit-area-active) .table-of-content.elementor-hidden-tablet .elementor-widget-wrap .btn-href-level-1 {
+        padding: 0 10px;
+    }
+}

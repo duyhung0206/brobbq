@@ -123,6 +123,18 @@ class Post extends Document {
 			]
 		);
 
+        $document->add_control(
+            'a_color',
+            [
+                'label' => __('Tag a color in elementor', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#c20c18',
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-text-editor a' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
 		$document->end_injection();
 	}
 
