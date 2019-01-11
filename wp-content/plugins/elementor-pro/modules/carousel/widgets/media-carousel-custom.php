@@ -71,6 +71,8 @@ class Media_Carousel_Custom extends Base
     {
         parent::_register_controls();
 
+        $this->add_section_option();
+
         $this->start_controls_section(
             'section_lightbox_style',
             [
@@ -136,6 +138,234 @@ class Media_Carousel_Custom extends Base
         $this->add_injections();
 
         $this->update_controls();
+    }
+
+    protected function add_section_option()
+    {
+        $this->start_controls_section(
+            'section_custom',
+            [
+                'label' => __('Custom slide', 'elementor-pro'),
+            ]
+        );
+
+        //product title
+        $this->add_control(
+            'product_title_heading',
+            [
+                'label' => __('Product title', 'elementor-pro'),
+                'type' => Controls_Manager::HEADING,
+            ]
+        );
+        $this->add_control(
+            'product_title_color',
+            [
+                'label' => __('Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#034366',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-title' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'product_title_color_hover',
+            [
+                'label' => __('Hover color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#034366',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-title:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'product_title_nofollow',
+            [
+                'type' => Controls_Manager::SWITCHER,
+                'label' => __('Nofollow', 'elementor-pro'),
+                'default' => 'yes',
+                'label_off' => __('No', 'elementor-pro'),
+                'label_on' => __('Yes', 'elementor-pro'),
+                'frontend_available' => true,
+            ]
+        );
+
+        //product image
+        $this->add_control(
+            'product_image_heading',
+            [
+                'label' => __('Product image', 'elementor-pro'),
+                'type' => Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+        $this->add_control(
+            'product_image_nofollow',
+            [
+                'type' => Controls_Manager::SWITCHER,
+                'label' => __('Nofollow', 'elementor-pro'),
+                'default' => 'yes',
+                'label_off' => __('No', 'elementor-pro'),
+                'label_on' => __('Yes', 'elementor-pro'),
+                'frontend_available' => true,
+            ]
+        );
+
+        //check price button
+        $this->add_control(
+            'check_price_button_heading',
+            [
+                'label' => __('Check price button', 'elementor-pro'),
+                'type' => Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]
+        );
+        $this->add_control(
+            'check_price_button_text',
+            [
+                'label' => __('Text', 'elementor-pro'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'Check price',
+            ]
+        );
+
+        $this->add_control(
+            'check_price_button_text_color',
+            [
+                'label' => __('Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-button div a' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'check_price_button_background_color',
+            [
+                'label' => __('Background color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0585CC',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-button div a' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //hover
+        $this->add_control(
+            'check_price_button_text_color_hover',
+            [
+                'label' => __('Hover Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-button:hover div a' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'check_price_button_background_color_hover',
+            [
+                'label' => __('Hover background color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0082d3',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-button:hover div a' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'check_price_button_nofollow',
+            [
+                'type' => Controls_Manager::SWITCHER,
+                'label' => __('Nofollow', 'elementor-pro'),
+                'default' => 'yes',
+                'label_off' => __('No', 'elementor-pro'),
+                'label_on' => __('Yes', 'elementor-pro'),
+                'frontend_available' => true,
+                'separator' => 'after',
+            ]
+        );
+
+        //read review button
+        $this->add_control(
+            'read_review_button_heading',
+            [
+                'label' => __('Read review button', 'elementor-pro'),
+                'type' => Controls_Manager::HEADING,
+            ]
+        );
+        $this->add_control(
+            'read_review_button_text',
+            [
+                'label' => __('Text', 'elementor-pro'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'Read review6996',
+            ]
+        );
+
+        $this->add_control(
+            'read_review_button_text_color',
+            [
+                'label' => __('Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0585CC',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-review div a.read-review' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'read_review_button_text_color_hover',
+            [
+                'label' => __('Hover Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#0585CC',
+                'selectors' => [
+                    '{{WRAPPER}} .media-carousel-custom-review:hover div a.read-review' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'read_review_button_nofollow',
+            [
+                'type' => Controls_Manager::SWITCHER,
+                'label' => __('Nofollow', 'elementor-pro'),
+                'default' => 'no',
+                'label_off' => __('No', 'elementor-pro'),
+                'label_on' => __('Yes', 'elementor-pro'),
+                'frontend_available' => true,
+                'separator' => 'after',
+            ]
+        );
+
+        //swiper button color
+        $this->add_control(
+            'swiper_button_heading',
+            [
+                'label' => __('Swiper button', 'elementor-pro'),
+                'type' => Controls_Manager::HEADING,
+            ]
+        );
+        $this->add_control(
+            'swiper_button_color',
+            [
+                'label' => __('Color', 'elementor-pro'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#FBFBFB',
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-swiper-button i' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section();
     }
 
     protected function add_repeater_controls(Repeater $repeater)
@@ -264,26 +494,47 @@ class Media_Carousel_Custom extends Base
 
     protected function print_slide(array $slide, array $settings, $element_key)
     {
-        echo '<a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '"><div class="media-carousel-custom-title">' . $slide['title'] . '</div></a>';
+        if ($settings['product_title_nofollow'] == 'yes') {
+            echo '<a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '"><div class="media-carousel-custom-title">' . $slide['title'] . '</div></a>';
+        } else {
+            echo '<a target="_blank" href="' . $slide["image-url"] . '"><div class="media-carousel-custom-title">' . $slide['title'] . '</div></a>';
+        }
 
         $this->add_render_attribute($element_key . '-image', [
             'class' => 'elementor-carousel-image',
             'style' => 'margin: 25px auto;width:164px;height:164px;background-image: url(' . $this->get_slide_image_url($slide, $settings) . ')',
         ]);
 
-        echo '<a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '">';
+        if ($settings['product_image_nofollow'] == 'yes') {
+            echo '<a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '">';
+        } else {
+            echo '<a target="_blank" href="' . $slide["image-url"] . '">';
+        }
         $this->print_slide_image($slide, $element_key, $settings);
         echo '</a>';
         echo "<div class='media-carousel-custom-brand'>" . $slide['brand'] . "</div>";
 
         echo "<div class='media-carousel-custom-summary'>" . $slide['summary'] . "</div>";
 
-        echo '<div class="media-carousel-custom-button">
-                <div><a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '">Check Price</a></div>
+        if ($settings['check_price_button_nofollow'] == 'yes') {
+            echo '<div class="media-carousel-custom-button">
+                <div><a target="_blank" rel="nofollow" href="' . $slide["image-url"] . '">' . $settings['check_price_button_text'] . '</a></div>
               </div>';
-        echo '<div class="media-carousel-custom-review">
-                <div><a target="_blank" class="read-review" href="#'. $slide["review-to"] . '">Read Review</a></div>
+        } else {
+            echo '<div class="media-carousel-custom-button">
+                <div><a target="_blank" href="' . $slide["image-url"] . '">' . $settings['check_price_button_text'] . '</a></div>
               </div>';
+        }
+
+        if ($settings['read_review_button_nofollow'] == 'yes') {
+            echo '<div class="media-carousel-custom-review">
+                <div><a target="_blank" rel="nofollow" class="read-review" href="#' . $slide["review-to"] . '">' . $settings['read_review_button_text'] . '</a></div>
+              </div>';
+        } else {
+            echo '<div class="media-carousel-custom-review">
+                <div><a target="_blank" class="read-review" href="#' . $slide["review-to"] . '">' . $settings['read_review_button_text'] . '</a></div>
+              </div>';
+        }
     }
 
     protected function print_slide_image(array $slide, $element_key, array $settings)
@@ -330,63 +581,6 @@ class Media_Carousel_Custom extends Base
                 'prefix_class' => 'elementor-skin-',
                 'render_type' => 'template',
                 'frontend_available' => true,
-            ]
-        );
-
-        $this->add_control(
-            'button_text_color',
-            [
-                'label' => __('Button Text Color', 'elementor-pro'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
-                'selectors' => [
-                    '{{WRAPPER}} .media-carousel-custom-button div a' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
-        $this->add_control(
-            'button_background_color',
-            [
-                'label' => __('Button Background Color', 'elementor-pro'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#0585CC',
-                'selectors' => [
-                    '{{WRAPPER}} .media-carousel-custom-button div a' => 'background-color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'button_hover_background_color',
-            [
-                'label' => __('Button Hover Background Color', 'elementor-pro'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#0082d3',
-                'selectors' => [
-                    '{{WRAPPER}} .media-carousel-custom-button:hover div a' => 'background-color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'button_read_review_color',
-            [
-                'label' => __('Button Read review Color', 'elementor-pro'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#0585CC',
-                'selectors' => [
-                    '{{WRAPPER}} .media-carousel-custom-review div a.read-review' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-        $this->add_control(
-            'swiper_button_color',
-            [
-                'label' => __('Button Swiper Color', 'elementor-pro'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#FBFBFB',
-                'selectors' => [
-                    '{{WRAPPER}} .elementor-swiper-button i' => 'color: {{VALUE}};',
-                ],
             ]
         );
 
